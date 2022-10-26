@@ -15,13 +15,12 @@ function displayCoffeeList(coffeeList) {
         const img = document.createElement('img')
         const title = document.createElement('h3')//create h3 
         const description = document.createElement('p')//stick dioscp in p
-        title.appendChild(document.createTextNode(coffee.tittle))//stick black coffee inside h3
+        title.appendChild(document.createTextNode(coffee.title))//stick black coffee inside h3
         description.appendChild(document.createTextNode(coffee.description))//stich descrip inside p-coffee yo
         card.appendChild(title)//add to the end of div
         card.appendChild(description)//add to the end of div
         coffeeContainer.appendChild(card)//take div and stuck it in main
     })
-
 
 }
 
