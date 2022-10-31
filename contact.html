@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Contact</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -16,62 +18,70 @@
             <form action="/index.html" method="post" id="myForm">
                 <label for="email">Email</label>
                 <input id="email" name="email" type="email" placeholder="youremail@gmail.com">
-            <br />
+                <br />
                 <label for="">Password</label>
                 <input id="password" name=password placeholder="password" minlenght="7">
-        <br />
-        <label for="age">Age</label>
-        <input min="18" max="100" type="number" name="age" id="age" placeholder="18++"> 
-    <br />
-    <label for="date">Date</label>
-    <input type="date" name="date" id="date">
-<br />
-<label for="description">description</label>
-<textarea name="description" id="description" cols="30" row="5"></textarea>
-<br />
-<label for="file">file</label>
-<input type="file" name="" id="" multiple />
-<br />
-<label for="cars">Cars</label>
-<select name="cars" id="cars">
-    <option value="selectone">Select One</option>
-    <option value="audi">Audi</option>
-    <option value="gmc">GMC</option>
-    <option value="tesla" selected>Tesla</option>
-    <option value="ford">Ford</option>
-</select>
-</select>
-<label for="radio">Select One</label>
-<input type="radio" name="select" id="" value="myRadio1">
-<input type="radio" name="select" id="" value="myRadio2">
-<input type="radio" name="select" id="" value="myRadio3">
-<br />
+                <br />
+                <label for="age">Age</label>
+                <input min="18" max="100" type="number" name="age" id="age" placeholder="18++">
+                <br />
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date">
+                <br />
+                <label for="description">description</label>
+                <textarea name="description" id="description" cols="30" row="5"></textarea>
+                <br />
+                <label for="file">file</label>
+                <input type="file" name="" id="" multiple />
+                <br />
+                <label for="cars">Cars</label>
+                <select name="cars" id="cars">
+                    <option value="selectone">Select One</option>
+                    <option value="audi">Audi</option>
+                    <option value="gmc">GMC</option>
+                    <option value="tesla" selected>Tesla</option> 
+                    <option value="ford">Ford</option>
+                </select>
+                </select>
+                <label for="radio">Select One</label>
+                <input type="radio" name="select" id="" value="myRadio1">
+                <input type="radio" name="select" id="" value="myRadio2">
+                <input type="radio" name="select" id="" value="myRadio3">
+                <br />
 
-<button type="submit">Submit</button>
-</form>
-</main>
-<script></script>
-<button onclick="changeHeading()">Change heading</button>
-<br />
-<button type="button"
- onclick="showDate('date')">
- Show date</button>
-<p id="Show date"></p>
-</div>
-<script>
-    function showDate() {
-        const date = document.getElementById('Show date').innerHTML = Date ()
-        
-    }
-</script>
-<script>
-    function changeHeading() {
-        // document.getElementsByName('h1')
-        const heading = document.getElementById('heading')
-        console.log(heading)
-        
-        heading.innerText = "I'm New"
-    }
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+        <button onclick="changeHeading()">Change heading</button>
+        <br />
+        <button onclick="showDate('date')">
+            Show date</button>
+        <p id="Show date"></p>
+    </div>
+    <script>
+        function showDate() {
+            const date = document.getElementById('Show date').innerHTML = Date()
+
+        }
+
+    </script>
+    <script>
+        function changeHeading() {
+            // document.getElementsByName('h1')
+            const heading = document.getElementById('heading')
+            console.log(heading)
+
+            heading.innerText = "I'm New"
+            heading.style.textAlign = "left"
+            heading.style.color = "red"
+        }
+        const showLocation = () => {
+            navigator.geolocation.getCurrentPosition(position) => {
+                alert(`latitude ${position.coords.latitude} longitude ${position.coords.longitude}`)
+            }, console.error)
+        }
+
     </script>
 </body>
+
 </html>

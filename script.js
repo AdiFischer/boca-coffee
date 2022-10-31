@@ -12,11 +12,11 @@ function displayCoffeeList(coffeeList) {
     coffeeContainer.innerHTML = ''
     coffeeList.map(coffee => {//for each 1 call them coffee
         const card = document.createElement('div')//create div somewhere
-        const img = document.createElement('img')
-        const title = document.createElement('h3')//create h3 
-        const description = document.createElement('p')//stick dioscp in p
+        const img = document.createElement('img')// create img somewhere
+        const title = document.createElement('h3')//create h3 somewhere
+        const description = document.createElement('p')//stick description in p
         title.appendChild(document.createTextNode(coffee.title))//stick black coffee inside h3
-        description.appendChild(document.createTextNode(coffee.description))//stich descrip inside p-coffee yo
+        description.appendChild(document.createTextNode(coffee.description))//stick description inside p-coffee yo
         card.appendChild(title)//add to the end of div
         card.appendChild(description)//add to the end of div
         coffeeContainer.appendChild(card)//take div and stuck it in main
